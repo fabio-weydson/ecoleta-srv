@@ -14,7 +14,7 @@ var itemsController = new itemsController_1.default();
 var upload = multer_1.default(multer_2.default);
 var routes = express_1.default.Router();
 routes.get('/', function (req, res) { res.json({ mensagem: "Servidor rodando" }); });
-routes.use('/uploads', express_1.default.static(path_1.default.resolve(__dirname, '..', 'uploads')));
+routes.use('/public/uploads', express_1.default.static(path_1.default.resolve(__dirname, '..', 'public/uploads')));
 // METODOS PADRAO
 // index, show, create, update, delete/destroy
 routes.get('/items', itemsController.index);
